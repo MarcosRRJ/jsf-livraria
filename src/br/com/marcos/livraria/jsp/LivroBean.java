@@ -7,12 +7,18 @@
  */
 package br.com.marcos.livraria.jsp;
 
-import javax.annotation.ManagedBean;
+import javax.faces.bean.ManagedBean;
 
 @ManagedBean
-public class LivroBean{
+public class LivroBean {
 
-	public void gravar(){
-		System.out.println("Livro Gravado");
+	private Livro livro = new Livro();
+
+	public Livro getLivro() {
+		return livro;
+
+	}
+	public void gravar() {
+		System.out.println("Livro Gravado " + this.livro.getTitulo());
 	}
 }
